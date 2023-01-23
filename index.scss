@@ -1,0 +1,213 @@
+/* CUSTOM CLASS */
+/* .possible-score{
+    background-color: red;
+    animation: none!important;
+} */
+// @keyframes "blinker" {
+// 	50% {
+// 		background-color: #C9bf1680;
+// 	}
+// }
+body {
+	* {
+		box-sizing: border-box;
+		transition: .3s;
+	}
+	margin: 0;
+	padding: 0;
+	background-color: #F2F2F2;
+	overflow-y: hidden;
+}
+tr {
+	border: 3px solid #C9bf16;
+	padding: 5px;
+	text-align: center;
+	color: #383838;
+}
+td {
+	border: 3px solid #C9bf16;
+	padding: 5px;
+	text-align: center;
+	color: #383838;
+}
+th {
+	border: 3px solid #C9bf16;
+	padding: 5px;
+	text-align: center;
+	color: #383838;
+}
+table {
+	img {
+		width: 30px;
+		height: 30px;
+	}
+	border-collapse: collapse;
+	background-color: #FFF;
+	box-shadow: -5px 5px 4px 3px #383838;
+}
+.affichage-buttons {
+	display: flex;
+	.image-de {
+		height: 48px;
+		width: 50px;
+		margin-left: 15px;
+		border: 3px solid transparent;
+		position: relative;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	.image-de.desSelectionne {
+		border: 3px solid #C9bf16;
+	}
+}
+header {
+	background-color: #383838;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 5px solid antiquewhite;
+	margin-bottom: 5vh;
+	>div {
+		text-align: center;
+		.color-1 {
+			color: #FFF;
+		}
+		.color-2 {
+			color: #F7ea10;
+		}
+		.color-3 {
+			color: antiquewhite;
+		}
+		.color-4 {
+			color: #D4c918;
+		}
+		>h1 {
+			font-family: 'Rubik Marker Hatch', cursive;
+			color: #C9bf16;
+			font-size: 40px;
+		}
+	}
+}
+main.main {
+	display: flex;
+	justify-content: space-around;
+	.button-group {
+		.start-button {
+			color: #C9bf16;
+			background-color: #383838;
+			border: 3px solid #C9bf16;
+			padding: 10px 20px;
+			cursor: pointer;
+			&:hover {
+				color: #383838;
+				background-color: #C9bf16;
+				border-color: #383838;
+			}
+		}
+		.continuer-button {
+			color: #383838;
+			background-color: #C9bf16;
+			border: 3px solid #383838;
+			padding: 10px 20px;
+			cursor: pointer;
+			&:hover {
+				color: #C9bf16;
+				background-color: #383838;
+				border-color: #C9bf16;
+			}
+		}
+	}
+	.affichage-buttons {
+		margin-top: 50px;
+	}
+}
+.tableau-scores {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.score-left {
+	margin-right: 20px;
+}
+.score-right {
+	margin-left: 20px;
+}
+border-header {
+	border: 5px solid #C9bf16;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+.header {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.oldScore {
+	animation: blinker 4s linear infinite;
+}
+.scoreActuel {
+	background-color: #383838;
+	animation: none !important;
+	td {
+		color: #FFF;
+	}
+}
+.perdu {
+	background: red;
+}
+#game-finished {
+	background-color: #C9bf16;
+	padding: 50px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	h1 {
+		color: #383838;
+		margin-bottom: 50px;
+	}
+	p {
+		color: #383838;
+		margin-bottom: 50px;
+	}
+	button {
+		color: #C9bf16;
+		background-color: #383838;
+		border: 3px solid #C9bf16;
+		padding: 10px 20px;
+		cursor: pointer;
+		&:hover {
+			color: #383838;
+			background-color: #C9bf16;
+			border-color: #383838;
+		}
+	}
+}
+.restart-button {
+	margin-left: 5px;
+	color: #383838;
+	background-color: transparent;
+	border: 3px solid #383838;
+	padding: 10px 20px;
+	cursor: pointer;
+	&:hover {
+		margin-left: 5px;
+		color: red;
+		background-color: transparent;
+		border: 3px solid red;
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+}

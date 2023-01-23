@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap" rel="stylesheet"> -->
+    <script src="./game.js"></script>
+    <title>Yahztee</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Yatzee</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div class="game-table">
+            <div class="button-group">
+                <button class="start-button">Lancer les dés</button>
+                <button class="continuer-button">Continuer</button>
+            </div>
+            <div class="affichage-buttons">
+              <div class="image-de" id="1">
+                <img src="./img/1.png" alt="">
+              </div>
+              <div class="image-de" id="2">
+                <img src="./img/2.png" alt="">
+              </div>
+              <div class="image-de" id="3">
+                <img src="./img/3.png" alt="">
+              </div>
+              <div class="image-de" id="4">
+                <img src="./img/4.png" alt="">
+              </div>
+              <div class="image-de" id="5">
+                <img src="./img/5.png" alt="">
+              </div>
+            </div>
+        </div>
+        <div class="tableau-scores">
+            <table class="score-left">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="un">
+                    <td><img src="./img/1.png" alt=""></td>
+                    <td></td>
+                  </tr>
+                  <tr id="deux">
+                    <td><img src="./img/2.png" alt=""></td>
+                    <td></td>
+                  </tr>
+                  <tr id="3">
+                    <td><img src="./img/3.png" alt=""></td>
+                    <td></td>
+                  </tr>
+                  <tr id="score-four">
+                    <td><img src="./img/4.png" alt=""></td>
+                    <td></td>
+                  </tr>
+                  <tr id="5">
+                    <td><img src="./img/5.png" alt=""></td>
+                    <td></td>
+                  </tr>
+                  <tr id="6">
+                    <td><img src="./img/6.png" alt=""></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr id="ST">
+                      <td>S.T</td>
+                      <td></td>
+                    </tr>
+                    <tr id="prime"> 
+                      <td>Prime</td>
+                      <td></td>
+                    </tr>
+                    <tr id="total-left">
+                      <td>Total</td>
+                      <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table class="score-right">
+                <thead>
+                  <tr>
+                    <th>Combinaisons</th>
+                    <th>Points</th>
+                    <th>Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="brelan">
+                    <td>Brelan</td>
+                    <td>Somme</td>
+                    <td></td>
+                  </tr>
+                  <tr id="petite-suite">
+                    <td>Petite suite</td>
+                    <td>30</td>
+                    <td></td>
+                  </tr>
+                  <tr id="grande-suite">
+                    <td>Grande suite</td>
+                    <td>40</td>
+                    <td></td>
+                  </tr>
+                  <tr id="full">
+                    <td>Full</td>
+                    <td>25</td>
+                    <td></td>
+                  </tr>
+                  <tr id="carre">
+                    <td>Carré</td>
+                    <td>Somme</td>
+                    <td></td>
+                  </tr>
+                  <tr id="yahtzee">
+                    <td>Yahtzee</td>
+                    <td>50</td>
+                    <td></td>
+                  </tr>
+                  <tr id="chance">
+                    <td>Chance</td>
+                    <td>Somme</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr id="total-combinaisons">
+                      <td colspan="2">Total Combinaisons</td>
+                      <td></td>
+                    </tr>
+                    <tr id="total-jeu">
+                      <td colspan="2">Total Jeu</td>
+                      <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <div id="game-finished">
+      <h1>TU AS GAGNE!!!</h1>
+      <p id="finished-text"></p>
+      <div>
+        <button class='restart-button' onClick="window.location.reload();">Refaire une partie</button>
+        <button id="close-it">Fermer</button>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,336 @@
+body {
+    box-sizing: border-box;
+    transition: .3s;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+    overflow-y: hidden;
+    }
+    
+    tr, td, th {
+    border: 3px solid black;
+    padding: 5px;
+    text-align: center;
+    color: #383838;
+      
+              
+                    
+                     
+    }
+    
+    table img {
+    width: 30px;
+    height: 30px;
+    }
+    
+    .affichage-buttons {
+    display: flex;
+                    
+                          
+                                      
+                           
+    }
+    
+    .affichage-buttons .image-de {
+                    
+    height: 48px;
+    width: 50px;
+    margin-left: 15px;
+    border: 3px solid transparent;
+    position: relative;
+    }
+    
+    .affichage-buttons img {
+    width: 100%;
+    height: 100%;
+    }
+    
+    table {
+    border-collapse: collapse;
+    background-color: #FFF;
+    }
+    
+    header {
+    background-color: #383838;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #fff;
+    margin-bottom: 5vh;
+    }
+    
+    header > div {
+    text-align: center;
+    }
+    
+    header > div > h1 {
+    font-family: 'Rubik Marker Hatch', cursive;
+    color: #FFF;
+    font-size: 40px;
+    }
+    
+    main.main {
+    display: flex;
+    justify-content: space-around;
+    }
+    
+    main.main .button-group .start-button {
+    color: #fff;
+    background-color: #383838;
+    border: 3px solid #383838;
+    padding: 10px 20px;
+    cursor: pointer;
+    }
+    
+    .button-group {
+    justify-content: space-between;
+    }
+    
+    main.main .button-group .start-button:hover {
+    color: #383838;
+    background-color: #fff;
+    border-color: #383838;
+    }
+    
+    main.main .button-group .continuer-button {
+    color: #383838;
+    background-color: #fff;
+    border: 3px solid #383838;
+    padding: 10px 20px;
+    cursor: pointer;
+    }
+    
+    main.main .button-group .continuer-button:hover {
+    color: #fff;
+    background-color: #383838;
+    border-color: #fff;
+    }
+    
+    main.main .affichage-buttons {
+    margin-top: 50px;
+    }
+    
+    .game-table {
+    margin: auto 0;
+    }
+    
+    .tableau-scores {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    }
+    
+    .score-left {
+    margin-right: 50px;
+    }
+    
+    /* CUSTOM CLASS */
+    border-header {
+    border: 5px solid #fff;
+    }
+    
+    .cursor-pointer {
+    cursor: pointer;
+    }
+    
+    .affichage-buttons .image-de.desSelectionne {
+    border: 3px solid #C9bf16;
+    }
+    
+    .header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .oldScore {
+    animation: blinker 1s linear infinite;
+    }
+    
+    /* .possible-score {
+    background-color: red;
+    animation: none!important;
+    } */
+    
+    .scoreActuel {
+    background-color: #383838;
+    animation: none!important;
+    }
+    
+    .scoreActuel td {
+    color: #FFF;
+    }
+    
+    .perdu {
+    background: red;
+    }
+    
+    @keyframes blinker {
+    50% { background-color: blue; }
+    }
+    
+    #game-finished {
+    background-color: #383838;
+    color: #fff;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+                      
+                            
+                                
+                               
+    }
+    
+    #game-finished.active {
+    display: block;
+                            
+    }
+    
+    #game-finished h2 {
+                       
+    margin-bottom: 20px;
+    }
+    
+    #game-finished .score {
+    font-size: 20px;
+    margin-bottom: 20px;
+                               
+                           
+                        
+    }
+    
+    #game-finished .play-again-button {
+    background-color: #fff;
+    color: #383838;
+    border: 3px solid #383838;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+    
+    #game-finished .play-again-button:hover {
+    background-color: #383838;
+    color: #fff;
+    border-color: #fff;
+                           
+                        
+    }
+    
+    #game-finished .quit-button {
+    background-color: #383838;
+    color: #fff;
+                                      
+    border: 3px solid #383838;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+    
+    #game-finished .quit-button:hover {
+    background-color: #fff;
+    color: #383838;
+    border-color: #383838;
+    }
+    
+    #game-finished .score-items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    }
+    
+    #game-finished .score-items div {
+    width: 45%;
+    }
+    
+    #game-finished .score-items .score-item-left {
+    text-align: left;
+    }
+    
+    #game-finished .score-items .score-item-right {
+    text-align: right;
+    }
+    
+    #game-finished .score-items .score-item-left span,
+    #game-finished .score-items .score-item-right span {
+    font-size: 20px;
+    }
+    
+    #game-finished .score-items .score-item-left span.highlight,
+    #game-finished .score-items .score-item-right span.highlight {
+    font-weight: bold;
+    }
+    
+    #game-finished .score-items .score-item-left span.highlight {
+    color: green;
+    }
+    
+    #game-finished .score-items .score-item-right span.highlight {
+    color: red;
+    }
+    
+    #game-finished .score-items .score-item-left span.small,
+    #game-finished .score-items .score-item-right span.small {
+    font-size: 14px;
+    }
+    
+    #game-finished .score-items .score-item-left span.small {
+    color: green;
+    }
+    
+    #game-finished .score-items .score-item-right span.small {
+    color: red;
+    }
+    
+    #game-finished .score-items .score-item-left span.highlight.small,
+    #game-finished .score-items .score-item-right span.highlight.small {
+    font-weight: normal;
+    }
+    
+    #game-finished .score-items .score-item-left span.highlight.small {
+    color: green;
+    }
+    
+    #game-finished .score-items .score-item-right span.highlight.small {
+    color: red;
+    }
+    
+    #game-finished .score-items .score-item-left span.small.highlight,
+    #game-finished .score-items .score-item-right span.small.highlight {
+    font-weight: bold;
+    }
+    
+    #game-finished .score-items .score-item-left span.small.highlight {
+    color: green;
+    }
+    
+    #game-finished .score-items .score-item-right span.small.highlight {
+    color: red;
+    }
+    
+    #game-finished .score-items .score-item-left span.highlight.small.highlight,
+    #game-finished .score-items .score-item-right span.highlight.small.highlight {
+    color: blue;
+    }
+    
+    #game-finished .score-items .score-item-left span.small.highlight.highlight,
+    #game-finished .score-items .score-item-right span.small.highlight.highlight {
+    color: blue;
+    }
+    
+    #game-finished .score-items .score-item-left span.highlight.small.highlight.highlight,
+    #game-finished .score-items .score-item-right span.highlight.small.highlight.highlight {
+    color: purple;
+    }
+    
+    #game-finished .score-items .score-item-left span.small.highlight.highlight.highlight,
+    #game-finished .score-items .score-item-right span.small.highlight.highlight.highlight {
+    color: purple;
+    }
